@@ -43,7 +43,7 @@ public class MovieBuddyApplication {
 
         /*--------------------------------------------------------------------------------------*/
         /* 명령어 별 실행 로직을 정의한다. */
-
+        
         final Map<Command, Consumer<List<String>>> commandActions = new HashMap<>();
         // 애플리케이션 종료:: ❯ quit
         commandActions.put(Command.Quit, arguments -> {
