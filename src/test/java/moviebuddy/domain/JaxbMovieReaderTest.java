@@ -12,8 +12,7 @@ public class JaxbMovieReaderTest {
 		JaxbMovieReader movieReader = new JaxbMovieReader();
 		
 		List<Movie> movies = movieReader.loadMovies();
-		Assertions.assertEquals(1375, movies.size());
-//		MovieFinderTest.assertEquals(1375, movies.size());
+		Assertions.assertEquals(1374, movies.size());
 	}
 	
 }

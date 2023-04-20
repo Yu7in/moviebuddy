@@ -2,6 +2,10 @@ package moviebuddy.domain;
 
 import java.util.List;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import moviebuddy.MovieBuddyFactory;
 import moviebuddy.domain.Movie;
 import moviebuddy.domain.MovieFinder;
 
@@ -9,10 +13,23 @@ import moviebuddy.domain.MovieFinder;
  * @author springrunner.kr@gmail.com
  */
 public class MovieFinderTest {
+	
+	final static MovieBuddyFactory movieBuddyFactory = new MovieBuddyFactory();
+	final static MovieFinder movieFinder = movieBuddyFactory.movieFinder();
+	
+	@Test
+	void NotEmpty_directedBy() {
+		List<Movie> movies = movieFinder.directedBy("Michael Bay");
+		Assertions.assertEquals(3, movies.size());
+	}
+	
+	@Test
+	void NotEmpty_ReleasedYearBy() {
+		List<Movie> movie = movieFinder.releasedYearBy(2015);
+		Assertions.assertEquals(225, movie.size());
+	}
 
 	public static void main(String[] args) {
-		MovieFinder movieFinder = new MovieFinder();
-		
 		List<Movie> result = movieFinder.directedBy("Michael Bay");
 		assertEquals(3, result.size());
 
