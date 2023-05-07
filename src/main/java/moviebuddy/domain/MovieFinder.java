@@ -13,7 +13,7 @@ public class MovieFinder {
 
 	private final MovieReader movieReader;
 	
-	public MovieFinder(MovieReader movieReader) {
+	public MovieFinder(@Qualifier("cachingMovieReader") MovieReader movieReader) {
 		this.movieReader = Objects.requireNonNull(movieReader);
 	}
 
