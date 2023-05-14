@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import javax.cache.annotation.CacheResult;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlRootElement;

@@ -12,6 +12,8 @@ import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import javax.cache.annotation.CacheResult;
+
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Profile;
